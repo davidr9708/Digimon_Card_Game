@@ -1,2 +1,2 @@
 # Digimon_Card_Game
-Clean data set for Digimon Card Game 
+Web scrapping to get clean data set for Digimon Card Game 
