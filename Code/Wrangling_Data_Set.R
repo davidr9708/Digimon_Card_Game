@@ -2,7 +2,7 @@
 library(tidyverse)
 
 # Data set
-load('All_card.rda')
+load('Rdata/All_card.rda')
 
 # Wrangling
 Decks <-
@@ -21,6 +21,14 @@ Decks <-
              Promo_info = str_to_title(
                               str_replace(
                                  str_replace(Promo_info, "\\s*&rtri;", ""), 
-                                             "\\s*\\[[:graph:]*\\]", "")))
+                                             "\\s*\\[[:graph:]*\\]", "")),
+             Promo_info = str_replace(Promo_info, 
+                                      "\\s*Deck\\s*", " Deck-"),
+             Promo_info = str_replace(Promo_info, 
+                                      "\\s*Booster\\s*", " Booster-")) %>%
+      separate(Promo_info, 
+           into = c('Deck_Type', 'Deck_Name'), 
+           sep = '-')
   
-
+## Creating CSV
+write.csv(Decks, 'Digimon_Card_Game.csv')
