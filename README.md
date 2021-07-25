@@ -1,4 +1,4 @@
-# Digimon_Card_Game
+# Digimon Card Game
 Web scrapping to get clean data set for Digimon Card Game 
 
 **Data source:** Official website of Digimon Card Game 
