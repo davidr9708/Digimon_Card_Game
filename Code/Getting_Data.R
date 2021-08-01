@@ -19,6 +19,18 @@ Node.text <- function(Nd) {
     html_text()
 }
 
+# Function to create data frame with codes and colors
+Color_data <- function(Cd, Color){
+  Identification <- page %>%
+    html_nodes(Cd) %>% 
+    html_nodes('.cardno') %>% 
+    html_text()
+
+  data.frame(Code = Identification, 
+             Color = rep(Color, times =length(Identification)))
+}
+Link <- "https://en.digimoncard.com/cardlist/?search=true&category=508001"
+
 # Deck
 for (ID in All.ID)
   {
@@ -52,26 +64,41 @@ for (ID in All.ID)
                                Play_Cost, Digivolve_Cost_1, Digivolve_Cost_2, 
                                Effect, Digivolve_Effect, Security_Effect,  
                                stringsAsFactors = FALSE)
+  
+  
+  ## Colors
+  ### Individual
+  Red <- Color_data('.card_detail_red', 'Red')
+  Blue <- Color_data('.card_detail_blue', 'Blue')
+  Yellow <- Color_data('.card_detail_yellow', 'Yellow')
+  Green <- Color_data('.card_detail_green', 'Green')
+  Black <- Color_data('.card_detail_black', 'Black')
+  Purple <- Color_data('.card_detail_purple', 'Purple')
+  White <-  Color_data('.card_detail_white', 'White')
+  ### Completed data frame
+  All.colors <-unique(rbind(Red, Blue, Yellow, Green, Black, Purple, White))
 
+  ## Adding colors
+  Double.diamond <- merge(Double.diamond, All.colors, by = 'Code')
+  
   ## Adding levels
   ### Take cards without levels
-  Tamers_Options <-
-    Double.diamond %>%
+  Tamers_Options <- Double.diamond %>%
       filter(Card_Type == 'Tamer' | Card_Type =='Option')
   ### Remove cards without levels
-  Double.diamond <-
-    Double.diamond %>%
+  Double.diamond <- Double.diamond %>%
       filter(Card_Type != 'Tamer', Card_Type !='Option') %>%
       data.frame(Card_Level) 
   
   ### Add back the cards without levels    
-  Double.diamond<-
-    bind_rows(Double.diamond, Tamers_Options) %>%
-    mutate(Card_Level = ifelse(is.na(Card_Level) == TRUE, '-', Card_Level))
+  Double.diamond <- bind_rows(Double.diamond, Tamers_Options) %>%
+      mutate(Card_Level = ifelse(is.na(Card_Level) == TRUE, '-', Card_Level))
+  
   
   ## Adding Combining the decks
   Deck <- rbind(Deck, Double.diamond)
-  }
+}
+
 
 # Saving the data sets
-save(Deck,file = 'Rdata/All_card.rda')
+save(Deck,file = 'Rdata/All_cards.rda')
