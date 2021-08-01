@@ -29,7 +29,7 @@ Color_data <- function(Cd, Color){
   data.frame(Code = Identification, 
              Color = rep(Color, times =length(Identification)))
 }
-Link <- "https://en.digimoncard.com/cardlist/?search=true&category=508001"
+
 
 # Deck
 for (ID in All.ID)
@@ -99,6 +99,7 @@ for (ID in All.ID)
   Decks <- rbind(Decks, Double.diamond)
 }
 
+# Removing parallel rare and other artistic cards
+Decks <- unique(Decks)
 # Saving the data sets
 save(Decks,file = 'Rdata/All_cards.rda')
-
