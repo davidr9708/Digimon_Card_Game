@@ -3,7 +3,7 @@ library(tidyverse)
 library(rvest)
 
 # Data frame for the Deck
-Deck <- data.frame()
+Decks <- data.frame()
 
 # ID links for decks
 ## Individual decks' ID
@@ -96,9 +96,9 @@ for (ID in All.ID)
   
   
   ## Adding Combining the decks
-  Deck <- rbind(Deck, Double.diamond)
+  Decks <- rbind(Decks, Double.diamond)
 }
 
-
 # Saving the data sets
-save(Deck,file = 'Rdata/All_cards.rda')
+save(Decks,file = 'Rdata/All_cards.rda')
+
