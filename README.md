@@ -3,7 +3,11 @@
 
 ## Description
 Web scrapping to get tidy data set for Digimon Card Game. There's only one code per card, parallel rare were excluded because they have the same features and code to their original card (no parallel rare).   
-### Decks
+
+## Data source
+Official website of [Digimon Card Game](https://en.digimoncard.com/cardlist/?search=true&category=508101)
+
+## Decks
  - ThemeBooster Classic Collection
  - Booster Battle Of Omega        
  - Booster Double Diamond         
@@ -19,9 +23,6 @@ Web scrapping to get tidy data set for Digimon Card Game. There's only one code 
  - Start Deck Mugen Black         
  - Start Deck Ulforceveedramon    
  - Start Deck Venom Violet        
-
-## Data source
-Official website of [Digimon Card Game](https://en.digimoncard.com/cardlist/?search=true&category=508101)
 
 ## Files' description
 1. **Digimon_Card_Game.csv:** Tidy data set with all cards. 
