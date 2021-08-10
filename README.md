@@ -3,6 +3,7 @@
 
 ## Description
 Web scrapping to get tidy data set for Digimon Card Game. There's only one code per card, parallel rare were excluded because they have the same features and code to their original card (no parallel rare).   
+The data was taken form the official website of [Digimon Card Game](https://en.digimoncard.com/cardlist/?search=true&category=508101)
 
 ## Decks
  - ThemeBooster Classic Collection
@@ -28,6 +29,3 @@ Web scrapping to get tidy data set for Digimon Card Game. There's only one code 
    - *Wrangling_Data_Set.R:* Code to clean the data set created in *Getting_Data.R*
 3. **Rdata:**
    - *All_cards.rda:* Data set extacted in *Getting_Data.R*, with R format. 
- 
-## Data source
-Official website of [Digimon Card Game](https://en.digimoncard.com/cardlist/?search=true&category=508101)
