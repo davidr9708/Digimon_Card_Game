@@ -7,7 +7,7 @@ Web scrapping to get tidy data set for Digimon Card Game. There's only one code 
 The data were taken from the official website of [Digimon Card Game](https://en.digimoncard.com/cardlist/?search=true&category=508101)
 
 ## Decks
- - ThemeBooster Classic Collection
+ - Theme Booster Classic Collection
  - Booster Battle Of Omega        
  - Booster Double Diamond         
  - Booster Great Legend           
