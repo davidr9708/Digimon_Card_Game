@@ -8,7 +8,7 @@ Decks <- data.frame()
 # ID links for decks
 ## Individual decks' ID
 Start_decks <-seq(from = 508101, to = 508108, by = 1)
-Booster_decks <-seq(from = 508001, to = 508007, by = 1)
+Booster_decks <-seq(from = 508001, to = 508008, by = 1)
 ## All decks' ID
 All.ID <- c(Start_decks,Booster_decks)
 
