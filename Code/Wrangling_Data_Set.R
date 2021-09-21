@@ -35,4 +35,4 @@ Decks <-
 Decks <- Decks[,c(1:8,18,19,9:17)] 
 
 ## Creating CSV
-write.csv(Decks, 'Digimon_Card_Game.csv')
+write.csv(Decks, 'Digimon_Card_Game.csv', row.names = FALSE)
