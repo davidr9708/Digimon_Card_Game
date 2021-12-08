@@ -2,26 +2,9 @@
 ![](Logo/digimoncardgamelogo.png)
 
 ## Description
-From webscrapping to inserting the data in SQLite, from python. There's only one code per card, parallel rare were excluded because they have the same features and code to their original card (no parallel rare).   
+From webscrapping to inserting the data in SQLite, from python. There's only one code per card, parallel rare were excluded because they have the same features and code to their original card (no parallel rare). 
 
 The data were taken from the official website of [Digimon Card Game](https://en.digimoncard.com/cardlist/?search=true&category=508101)
-
-## Decks
- - Theme Booster Classic Collection
- - Booster Battle Of Omega        
- - Booster Double Diamond         
- - Booster Great Legend           
- - Booster New Evolution          
- - Booster Ultimate Power         
- - Booster Union Impact          
- - Start Deck Cocytus Blue        
- - Start Deck Gaia Red           
- - Start Deck Gallantmon          
- - Start Deck Giga Green       
- - Start Deck Heaven's Yellow     
- - Start Deck Mugen Black         
- - Start Deck Ulforceveedramon    
- - Start Deck Venom Violet        
 
 ## Files' description
 1. **Digimon_Card_Game.csv:** Tidy data set with all cards. 
