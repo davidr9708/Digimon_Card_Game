@@ -7,9 +7,9 @@ From webscrapping to inserting the data in SQLite, from python. There's only one
 The data were taken from the official website of [Digimon Card Game](https://en.digimoncard.com/cardlist/?search=true&category=508101)
 
 ## Files' description
-1. **Digimon_Card_Game.csv:** Tidy data set with all cards. 
+1. **Digimon_cards.csv:** Tidy data set with all cards. 
 2. **Code:** 
-   - *Getting_Data.R* Code to extract the data from the webpage
-   - *Wrangling_Data_Set.R:* Code to clean the data set created in *Getting_Data.R*
-3. **Rdata:**
-   - *All_cards.rda:* Data set extacted in *Getting_Data.R*, with R format. 
+   - *1_Getting_data.py:* To webscrap and get a clean dataset for all the decks.
+   - *2_Database_creation.py:* To create the database and the tables in SQLite
+   - *3_Data_insertion.py:* To insert the data from the dataset created in *1_Getting_data.py* into the database created in *2_Database_creation.py*
+
