@@ -1,8 +1,8 @@
-# Digimon Card Game 2021 (Data Set)
+# Digimon Card Game 2021 (Database)
 ![](Logo/digimoncardgamelogo.png)
 
 ## Description
-Web scrapping to get tidy data set for Digimon Card Game. There's only one code per card, parallel rare were excluded because they have the same features and code to their original card (no parallel rare).   
+From webscrapping to insert the data in SQLite, from python. There's only one code per card, parallel rare were excluded because they have the same features and code to their original card (no parallel rare).   
 
 The data were taken from the official website of [Digimon Card Game](https://en.digimoncard.com/cardlist/?search=true&category=508101)
 
