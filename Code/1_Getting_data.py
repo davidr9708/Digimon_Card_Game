@@ -42,6 +42,7 @@ for link in links:
         code    = card.find('li[class = cardno]')[0].text
         name    = card.find('div.card_name')[0].text
         cd_type = card.find('li[class = cardtype]')[0].text
+        image   = ''.join(['https://en.digimoncard.com/',re.findall('\.\./(images/.+\.png)', card.find("img[src^='../images']")[0].html)[0]])
         try:
             level = re.findall('[0-9]+', card.find('li[class = cardlv]')[0].text)[0]
         except:
@@ -119,7 +120,7 @@ for link in links:
                 'Play_cost':play_cost, 'Digivolve_cost_1':digivolve_cost_1, 'Digivolve_level_1':digivolve_level_1,
                 'Digivolve_cost_2':digivolve_cost_2, 'Digivolve_level_2':digivolve_level_2,
                 'Effect':effect, 'Digivolve_effect':digivolve_effect, 'Security_effect':security_effect,
-                'Deck_type':deck_type, 'Deck_name':deck_name}
+                'Deck_type':deck_type, 'Deck_name':deck_name, 'Image':image}
 
         ## Gathering all the decks
         all_cards.append(data)
