@@ -1,8 +1,10 @@
-# Digimon Card Game 2021 (Database)
+# Digimon Card Game (Database)
 ![](Logo/digimoncardgamelogo.png)
 
 ## Description
 From webscrapping to inserting the data in SQLite, using python. There's only one code per card, parallel rare were excluded because they have the same features and code to their original card (no parallel rare). 
+
+The code is design to webscrap even the newest decks, it doesn't care when the date update, if the deck is in the page, it will get it.  
 
 The data were taken from the official website of [Digimon Card Game](https://en.digimoncard.com/cardlist/?search=true&category=508101)
 
