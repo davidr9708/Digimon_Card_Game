@@ -9,8 +9,7 @@ The code is designed to webscrape even the newest decks, it doesn't matter the d
 The data were taken from the official website of [Digimon Card Game](https://en.digimoncard.com/cardlist/?search=true&category=508101)
 
 ## Files' description
-1. **Digimon_cards.csv:** Tidy data set with all cards. 
-2. **Code:** 
+**Code:** 
    - **1_Getting_data.py:** To webscrap and get a clean dataset for all the decks.
    - **2_Database_creation.py:** To create the database and the tables in SQLite
    - **3_Data_insertion.py:** To insert the data from the dataset created in *1_Getting_data.py* into the database created in *2_Database_creation.py*
