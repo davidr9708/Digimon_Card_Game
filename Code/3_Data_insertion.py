@@ -106,37 +106,37 @@ insert_digimon = '''INSERT INTO Digimons(code, name, level, card_type_id, color_
                                         Digivolve_level_1, Digivolve_cost_2, Digivolve_level_2,
                                         effect_id, digivolve_effect_id, security_effect_id, deck_type_id, 'Deck_name') VALUES'''
 
-                                        for row in range(0,len(data)):
-                                            i = 0
-                                            insert_digimon += '('
+for row in range(0,len(data)):
+    i = 0
+    insert_digimon += '('
 
-                                            for feature in data.iloc[row]:
-                                                title   = data.columns.values[i]
-                                                feature = feature
+    for feature in data.iloc[row]:
+        title   = data.columns.values[i]
+        feature = feature
 
-                                                if title in ['Effect', 'Digivolve_effect', 'Security_effect']:
-                                                    title = 'Effect'
+        if title in ['Effect', 'Digivolve_effect', 'Security_effect']:
+            title = 'Effect'
 
-                                                if title in colum_names:
-                                                    select_query = 'SELECT id FROM '
-                                                    select_query += str(title) + 's' + ' WHERE name = ? ;'
-                                                    cur.execute(select_query, (feature, ))
-                                                    try:
-                                                        feature_id = cur.fetchone()[0]
-                                                        insert_digimon += '"'+str(feature_id) + '"'+','
-                                                    except:
-                                                        insert_digimon += 'NULL,'
-                                                elif pd.isna(feature):
-                                                    insert_digimon += 'NULL,'
+        if title in colum_names:
+            select_query = 'SELECT id FROM '
+            select_query += str(title) + 's' + ' WHERE name = ? ;'
+            cur.execute(select_query, (feature, ))
+        try:
+            feature_id = cur.fetchone()[0]
+            insert_digimon += '"'+str(feature_id) + '"'+','
+        except:
+            insert_digimon += 'NULL,'
+        elif pd.isna(feature):
+            insert_digimon += 'NULL,'
 
-                                                else:
-                                                    insert_digimon += '"' + str(feature) + '"'+','
+        else:
+            insert_digimon += '"' + str(feature) + '"'+','
 
-                                                i = i+1
+        i = i+1
 
-                                            insert_digimon = insert_digimon[:-1] +'),'
+    insert_digimon = insert_digimon[:-1] +'),'
 
-                                        insert_digimon = insert_digimon[:-2] +');'
+insert_digimon = insert_digimon[:-2] +');'
 
 cur.execute(insert_digimon)
 con.commit()
