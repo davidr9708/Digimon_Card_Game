@@ -121,11 +121,11 @@ for row in range(0,len(data)):
             select_query = 'SELECT id FROM '
             select_query += str(title) + 's' + ' WHERE name = ? ;'
             cur.execute(select_query, (feature, ))
-        try:
-            feature_id = cur.fetchone()[0]
-            insert_digimon += '"'+str(feature_id) + '"'+','
-        except:
-            insert_digimon += 'NULL,'
+            try:
+                feature_id = cur.fetchone()[0]
+                insert_digimon += '"'+str(feature_id) + '"'+','
+            except:
+                insert_digimon += 'NULL,'
         elif pd.isna(feature):
             insert_digimon += 'NULL,'
 
