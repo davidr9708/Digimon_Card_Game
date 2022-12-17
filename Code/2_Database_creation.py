@@ -15,24 +15,18 @@ DROP TABLE IF EXISTS Digimon_types;
 DROP TABLE IF EXISTS Deck_types;
 DROP TABLE IF EXISTS Effects;
 DROP TABLE IF EXISTS Digimons;
-
-
-
 CREATE TABLE Card_types(
     id      INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     name    VARCHAR(255)
 );
-
 CREATE TABLE Colors(
     id      INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     name    VARCHAR(255)
 );
-
 CREATE TABLE Forms(
     id      INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     name    VARCHAR(255)
 );
-
 CREATE TABLE Attributes(
     id      INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     name    VARCHAR(255)
@@ -41,17 +35,14 @@ CREATE TABLE Digimon_types(
     id      INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     name    VARCHAR(255)
 );
-
 CREATE TABLE Deck_types(
     id      INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     name    VARCHAR(255)
 );
-
 CREATE TABLE Effects(
     id      INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     name    TEXT
 );
-
 CREATE TABLE Digimons(
     code                VARCHAR(255) NOT NULL PRIMARY KEY,
     name                VARCHAR(255) NOT NULL,
@@ -72,6 +63,7 @@ CREATE TABLE Digimons(
     effect_id           INTEGER      NULL,
     digivolve_effect_id INTEGER      NULL,
     security_effect_id  INTEGER      NULL,
+    Image_link          TEXT             ,
     FOREIGN KEY(card_type_id)        REFERENCES Card_types(id),
     FOREIGN KEY(color_id)            REFERENCES Colors(id),
     FOREIGN KEY(form_id)             REFERENCES Forms(id),
