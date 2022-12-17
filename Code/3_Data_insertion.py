@@ -104,7 +104,7 @@ colum_names = ['Card_type', 'Color', 'Form', 'Attribute','Digimon_type',
 insert_digimon = '''INSERT INTO Digimons(code, name, level, card_type_id, color_id, form_id, attribute_id,
                                         digimon_type_id, DP, Play_cost, Digivolve_cost_1,
                                         Digivolve_level_1, Digivolve_cost_2, Digivolve_level_2,
-                                        effect_id, digivolve_effect_id, security_effect_id, deck_type_id, 'Deck_name') VALUES'''
+                                        effect_id, digivolve_effect_id, security_effect_id, deck_type_id, 'Deck_name','Image_link') VALUES'''
 
 for row in range(0,len(data)):
     i = 0
