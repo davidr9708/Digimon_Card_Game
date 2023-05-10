@@ -12,6 +12,3 @@ The data were taken from the official website of [Digimon Card Game](https://en.
    - **1_Getting_data.py:** To webscrap and get a clean dataset for all the decks.
    - **2_Database_creation.py:** To create the database and the tables in SQLite
    - **3_Data_insertion.py:** To insert the data from the dataset created in *1_Getting_data.py* into the database created in *2_Database_creation.py*
-
-## Dashboard
-You can find a dashboard that compares individual cards with a group of card here: https://public.tableau.com/app/profile/davidr9708/viz/DigimonCardsDashboard/Dashboard1
