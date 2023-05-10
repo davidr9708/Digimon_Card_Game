@@ -1,5 +1,4 @@
 # Digimon Card Game (Database)
-![](Logo/digimoncardgamelogo.png)
 
 ## Description
 From webscrapping to inserting the data in SQLite, using python. There's only one code per card, parallel rare were excluded because they have the same features and code to their original card (no parallel rare). 
